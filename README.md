@@ -1,2 +1,2 @@
-# shivamora27.github.io
-personal portfolio
+shivamora27.github.io
+
