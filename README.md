@@ -47,17 +47,18 @@ I'm <b> Shivam Patidar</b>, a pursuing <b>Computer Science & Engineering </b> As
 ![C++](https://img.shields.io/badge/-C++-00599C?style=flat-square&logo=c)
 ![Python](https://img.shields.io/badge/-Python-black?style=flat-square&logo=Python)
 </br>
-[![Terraform](https://img.shields.io/badge/Learning-Terraform-623ce4?style=flat-square&logo=terraform&logoColor=white)](https://www.terraform.io/)
-[![AWS](https://img.shields.io/badge/Learning-AWS-FF9900?style=flat-square&logo=amazon-aws&logoColor=white)](https://github.com/br3ndonland/awsdev)
-</br>
-[![Editor](https://img.shields.io/badge/Editor-VsCode-blue?style=flat-square&logo=visual-studio-code&logoColor=white)](https://www.jetbrains.com/idea/download/#section=windows)
-![MySQL](https://img.shields.io/badge/-MySQL-black?style=flat-square&logo=mysql)
-![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-black?style=flat-square&logo=postgresql)
-![Docker](https://img.shields.io/badge/-Docker-black?style=flat-square&logo=docker)
-</br>
-![Google Cloud](https://img.shields.io/badge/Google%20Cloud-black?style=flat-square&logo=google-cloud)
 ![Git](https://img.shields.io/badge/-Git-black?style=flat-square&logo=git)
 ![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github)
+[![Pycharm](https://img.shields.io/badge/IDE-Intellj-yellow?style=flat-square&logo=JetBrains)](https://www.jetbrains.com/idea/)
+[![Editor](https://img.shields.io/badge/Editor-VsCode-blue?style=flat-square&logo=visual-studio-code&logoColor=white)](https://www.jetbrains.com/idea/download/#section=windows)
+</br>
+![MySQL](https://img.shields.io/badge/-MySQL-black?style=flat-square&logo=mysql)
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-black?style=flat-square&logo=postgresql)
+</br>
+![Google Cloud](https://img.shields.io/badge/Google%20Cloud-black?style=flat-square&logo=google-cloud)
+[![Terraform](https://img.shields.io/badge/Learning-Terraform-623ce4?style=flat-square&logo=terraform&logoColor=white)](https://www.terraform.io/)
+[![AWS](https://img.shields.io/badge/Learning-AWS-FF9900?style=flat-square&logo=amazon-aws&logoColor=white)](https://github.com/br3ndonland/awsdev)
+![Azure](https://img.shields.io/badge/-Azure-0089D6?style=flat-square&logo=microsoft-azure&logoColor=white)
 </br>
 [![OS](https://img.shields.io/badge/OS-Linux-informational?style=flat-square&logo=linux&logoColor=white)](https://en.wikipedia.org/wiki/Linux)
 ![Shell](https://img.shields.io/badge/-Shell-blasck?style=plastic&logo=Shell)
@@ -65,11 +66,16 @@ I'm <b> Shivam Patidar</b>, a pursuing <b>Computer Science & Engineering </b> As
 </br>
 ![Apache](https://img.shields.io/badge/-Apache-D22128?style=flat-square&logo=Apache&logoColor=white)
 [![centOS](https://img.shields.io/badge/RedHat-8.0-Red?style=flat-square&logo=RedHat&logoColor=262577)](https://www.redhat.com/en)
-[![Pycharm](https://img.shields.io/badge/IDE-Intellj-yellow?style=flat-square&logo=JetBrains)](https://www.jetbrains.com/idea/)
+![Nginx](https://img.shields.io/badge/-Nginx-269539?style=flat-square&logo=nginx&logoColor=white)
 </br>
 [![Kubernetes](https://img.shields.io/badge/-Kubernetes-326CE5?style=flat-square&logo=Kubernetes&logoColor=ffffff)](https://kubernetes.io/)
 [![Ansible](https://img.shields.io/badge/-ansible-326CE5?style=flat-square&logo=ansible&logoColor=000000)](https://ansible.io/)
+![Docker](https://img.shields.io/badge/-Docker-black?style=flat-square&logo=docker)
 </br>
+![Grafana](https://img.shields.io/badge/-Grafana-FF6E4E?style=flat-square&logo=grafana&logoColor=white)
+![Prometheus](https://img.shields.io/badge/-Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)
+
+
 
 
 
