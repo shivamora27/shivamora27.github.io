@@ -400,5 +400,67 @@
     </footer>
 
     <script src="js/script.js"></script>
+    
+    <!-- Fallback inline script for animations -->
+    <script>
+        // Fallback: If external script fails, this ensures basic functionality
+        (function() {
+            // Typing Animation Fallback
+            var typedText = document.querySelector('.typed-text');
+            if (typedText && !typedText.textContent) {
+                var texts = ['DevOps Lead', 'Cloud Architect', 'Team Leader', 'Problem Solver'];
+                var textIndex = 0, charIndex = 0, isDeleting = false;
+                
+                function type() {
+                    var current = texts[textIndex];
+                    if (isDeleting) {
+                        typedText.textContent = current.substring(0, charIndex - 1);
+                        charIndex--;
+                    } else {
+                        typedText.textContent = current.substring(0, charIndex + 1);
+                        charIndex++;
+                    }
+                    
+                    var speed = isDeleting ? 50 : 100;
+                    if (!isDeleting && charIndex === current.length) {
+                        speed = 2000;
+                        isDeleting = true;
+                    } else if (isDeleting && charIndex === 0) {
+                        isDeleting = false;
+                        textIndex = (textIndex + 1) % texts.length;
+                        speed = 500;
+                    }
+                    setTimeout(type, speed);
+                }
+                type();
+            }
+            
+            // Scroll Animation Fallback
+            function showSections() {
+                var sections = document.querySelectorAll('.section-animate');
+                var trigger = window.innerHeight * 0.85;
+                
+                for (var i = 0; i < sections.length; i++) {
+                    var rect = sections[i].getBoundingClientRect();
+                    if (rect.top < trigger) {
+                        sections[i].classList.add('visible');
+                    }
+                }
+            }
+            
+            // Run on load and scroll
+            showSections();
+            window.addEventListener('scroll', showSections);
+            window.addEventListener('load', showSections);
+            
+            // Force show after 2 seconds as ultimate fallback
+            setTimeout(function() {
+                var sections = document.querySelectorAll('.section-animate');
+                for (var i = 0; i < sections.length; i++) {
+                    sections[i].classList.add('visible');
+                }
+            }, 2000);
+        })();
+    </script>
 </body>
 </html>

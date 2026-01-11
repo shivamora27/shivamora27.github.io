@@ -1,41 +1,97 @@
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize all animations
+    initTypingAnimation();
+    initScrollAnimations();
+    initSmoothScroll();
+    addConsoleEasterEgg();
+});
+
 // Typing Animation
-const typedTextElement = document.querySelector('.typed-text');
-const texts = ['DevOps Lead', 'Cloud Architect', 'Team Leader', 'Problem Solver', 'Automation Expert'];
-let textIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
+function initTypingAnimation() {
+    const typedTextElement = document.querySelector('.typed-text');
+    if (!typedTextElement) return;
 
-function typeText() {
-    const currentText = texts[textIndex];
-    
-    if (isDeleting) {
-        typedTextElement.textContent = currentText.substring(0, charIndex - 1);
-        charIndex--;
-    } else {
-        typedTextElement.textContent = currentText.substring(0, charIndex + 1);
-        charIndex++;
+    const texts = ['DevOps Lead', 'Cloud Architect', 'Team Leader', 'Problem Solver', 'Automation Expert'];
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeText() {
+        const currentText = texts[textIndex];
+        
+        if (isDeleting) {
+            typedTextElement.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typedTextElement.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        let typeSpeed = isDeleting ? 50 : 100;
+
+        if (!isDeleting && charIndex === currentText.length) {
+            typeSpeed = 2000;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+            typeSpeed = 500;
+        }
+
+        setTimeout(typeText, typeSpeed);
     }
 
-    let typeSpeed = isDeleting ? 50 : 100;
-
-    if (!isDeleting && charIndex === currentText.length) {
-        typeSpeed = 2000;
-        isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        textIndex = (textIndex + 1) % texts.length;
-        typeSpeed = 500;
-    }
-
-    setTimeout(typeText, typeSpeed);
+    // Start typing animation
+    typeText();
 }
 
-// Scroll Animation
-function handleScrollAnimation() {
+// Scroll Animations using Intersection Observer
+function initScrollAnimations() {
+    const sections = document.querySelectorAll('.section-animate');
+    
+    if (!sections.length) return;
+
+    // Check if Intersection Observer is supported
+    if ('IntersectionObserver' in window) {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Optional: stop observing after animation
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(function(section) {
+            observer.observe(section);
+        });
+    } else {
+        // Fallback for older browsers - just show all sections
+        sections.forEach(function(section) {
+            section.classList.add('visible');
+        });
+    }
+
+    // Also trigger on scroll for backup
+    window.addEventListener('scroll', handleScrollFallback);
+    
+    // Initial check
+    handleScrollFallback();
+}
+
+function handleScrollFallback() {
     const sections = document.querySelectorAll('.section-animate');
     const triggerPoint = window.innerHeight * 0.85;
 
-    sections.forEach(section => {
+    sections.forEach(function(section) {
         const sectionTop = section.getBoundingClientRect().top;
         
         if (sectionTop < triggerPoint) {
@@ -44,78 +100,44 @@ function handleScrollAnimation() {
     });
 }
 
-// Smooth Scroll for Navigation
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Parallax Effect for Floating Shapes
-function handleParallax() {
-    const shapes = document.querySelectorAll('.floating-shapes span');
-    const scrolled = window.pageYOffset;
-
-    shapes.forEach((shape, index) => {
-        const speed = 0.1 + (index * 0.02);
-        shape.style.transform = `translateY(${scrolled * speed}px)`;
+// Smooth Scroll for anchor links
+function initSmoothScroll() {
+    const anchors = document.querySelectorAll('a[href^="#"]');
+    
+    anchors.forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const target = document.querySelector(targetId);
+            
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
     });
 }
 
-// Initialize
-document.addEventListener('DOMContentLoaded', () => {
-    typeText();
-    handleScrollAnimation();
-    
-    // Add visible class to first section
-    setTimeout(() => {
-        document.querySelector('.profile')?.classList.add('visible');
-    }, 500);
-});
-
-// Event Listeners
-window.addEventListener('scroll', () => {
-    handleScrollAnimation();
-});
-
-// Add hover effect for skill badges
-document.querySelectorAll('.skill-badge').forEach(badge => {
-    badge.addEventListener('mouseenter', function() {
-        this.style.transform = 'scale(1.1) translateY(-3px)';
-    });
-    
-    badge.addEventListener('mouseleave', function() {
-        this.style.transform = 'scale(1) translateY(0)';
-    });
-});
-
-// Add ripple effect to buttons
-document.querySelectorAll('.cta-btn, .contact-btn').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-        const ripple = document.createElement('span');
-        ripple.classList.add('ripple');
-        
-        const rect = this.getBoundingClientRect();
-        const size = Math.max(rect.width, rect.height);
-        
-        ripple.style.width = ripple.style.height = `${size}px`;
-        ripple.style.left = `${e.clientX - rect.left - size / 2}px`;
-        ripple.style.top = `${e.clientY - rect.top - size / 2}px`;
-        
-        this.appendChild(ripple);
-        
-        setTimeout(() => ripple.remove(), 600);
-    });
-});
-
 // Console Easter Egg
-console.log('%c👋 Hey there, curious developer!', 'font-size: 20px; font-weight: bold; color: #667eea;');
-console.log('%c🚀 Looking for opportunities? Reach out to me!', 'font-size: 14px; color: #764ba2;');
-console.log('%c📧 shivam8770ora@gmail.com', 'font-size: 12px; color: #888;');
+function addConsoleEasterEgg() {
+    console.log('%c👋 Hey there, curious developer!', 'font-size: 20px; font-weight: bold; color: #667eea;');
+    console.log('%c🚀 Looking for opportunities? Reach out to me!', 'font-size: 14px; color: #764ba2;');
+    console.log('%c📧 shivam8770ora@gmail.com', 'font-size: 12px; color: #888;');
+}
+
+// Add hover effects for skill badges
+document.addEventListener('DOMContentLoaded', function() {
+    const skillBadges = document.querySelectorAll('.skill-badge');
+    
+    skillBadges.forEach(function(badge) {
+        badge.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.1) translateY(-3px)';
+        });
+        
+        badge.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1) translateY(0)';
+        });
+    });
+});
