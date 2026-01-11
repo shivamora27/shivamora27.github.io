@@ -3,85 +3,402 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivam</title>
+    <title>Shivam Patidar | DevOps Lead</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fauna+One&display=swap" rel="stylesheet">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="images/favicon/site.webmanifest">
 </head>
 <body>
-    <div class="top_container">
-        <img class = "top-cloud"src="images\cloud.png" alt="">
-        <h1>I'm Shivam</h1>
-        <p class="dev"> a developer.</p>
-        <img class="mountain" src="images\mountain.png" alt="">
-        <img class="bottom-cloud" src="images\cloud.png" alt="">
-        
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="floating-shapes">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
     </div>
-    <div class="middle-container">
-        <div class="profile">
-          <img class = "my-image"src="images\profile1.jpg" alt="Shivam" >
-          <h2><span id="hello"> Hello.</span></h2>
-          <p id="descr"> Hey guys, I am Shivam Patidar , A Computer Science Engineering student from Rustamji Institute of Technology, BSF Academy, Tekanpur,Gwalior.
-            I am a Developer/Programmer .It is my hobby to Learn new Development and Programming skills. 
-            
-          </p>
-        </div>
-        <hr id="first-line">
-        <div class="skills">
-          <h2 id="skill">My Skills.</h2>
-          <div class="skill-row ml-row">
-            <img class="ml" src="images\cp.jpeg" alt="Competitive Programing">
-            <h3>Competitive Programing</h3>
-            <p>I started Competitive Programing in 1st Semester of my College Life after attending Geeks classes.
-              To learn it i Joined a club and started learning programming language  for it then 
-              I have completed Some Courses  on various platforms.
-            </p>
-          </div>
-          <div class="skill-row web-row">
-            <img class="web" src="images\Web.png" alt="Web-Development">
-            <h3>Web Development</h3>
-            <p>To contribute towards open source project I started to improve my Webiste Development Skills recently. And this 
-              page is a part of my learning process. 
-            </p>
-            </div>
-          <div class="skill-row language-row">
-            <img class="languages" src="images\Lang.png" alt="Languages">
-            <h3>Programming Languages</h3>
-            <p>I have programming skills of different languages like Python , C++ , HTML and CSS till now.To improve and learn new languages 
-              I continuously compete in different competitive compititions and coding challenges.
-            </p>
-          </div>
-        </div>
-        <hr id="second-line">
-        <div class="contact-me">
-          <h2 class="touch">Get In Touch</h2>
-          <h3 class="talk">Let's Have a talk</h3>
-          <div class="contact"><a class="btn" href="mailto:shivam8770ora@gmail.com">CONTACT ME</a></div>
-        </div>
-      </div>
-      
-      
-      <div class="bottom-container">
-       
-        <a class="footer-link" target="_blank" href="https://www.linkedin.com/in/shivam-patidar-9639a1190"><img class="images1" src="images\linkedin.png" alt="Linkedin"></a>
-        
-        <a class="footer-link" target="_blank"href="https://github.com/shivamora27"><img class="images1" src="images\git.png" alt="Github"></a>
-  
-        <a class="footer-link"target="_blank" href="https://www.hackerrank.com/shivam8770ora?hr_r=1"><img class="images1" src="images\hackerrank.png" alt="Hackerrank"></a>
 
-        <a class="footer-link"target="_blank" href="https://www.codechef.com/users/shivamora27"><img class="images1" src="images\cc.png" alt="Codechef"></a>
-        <p id="cr">© 2020 Shivam Patidar.</p>
-        
-      </div>
+    <!-- Hero Section -->
+    <div class="top_container">
+        <div class="hero-content" data-aos="fade-up">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <p class="greeting">
+                <span class="terminal-prompt">$</span> Hello everyone <span class="wave">👋</span> I'm
+            </p>
+            <h1 class="glitch" data-text="Shivam Patidar">Shivam Patidar</h1>
+            <div class="typing-container">
+                <span class="static-text">I'm a </span>
+                <span class="typed-text"></span>
+                <span class="cursor">|</span>
+            </div>
+            <p class="tagline">
+                <span class="tag"><i class="fas fa-cloud"></i> Multi-Cloud</span>
+                <span class="tag"><i class="fab fa-docker"></i> Kubernetes</span>
+                <span class="tag"><i class="fas fa-code-branch"></i> Terraform</span>
+                <span class="tag"><i class="fas fa-shield-alt"></i> DevSecOps</span>
+            </p>
+            <div class="hero-badges">
+                <span class="badge pulse"><i class="fas fa-briefcase"></i> 3+ Years Experience</span>
+                <span class="badge pulse"><i class="fab fa-google"></i> 2× GCP Certified</span>
+                <span class="badge pulse"><i class="fab fa-aws"></i> AWS Certified</span>
+            </div>
+            <div class="cta-buttons">
+                <a href="#about" class="cta-btn primary">
+                    <span>About Me</span>
+                    <i class="fas fa-arrow-down"></i>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </div>
+
+    <div class="middle-container">
+        <!-- About Section -->
+        <section id="about" class="profile section-animate">
+            <div class="section-header">
+                <span class="section-number">01.</span>
+                <h2>About Me</h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img class="my-image" src="images/profile1.jpg" alt="Shivam Patidar">
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>
+                        I'm a <span class="highlight">DevOps Lead</span> at <span class="highlight">Stackbox</span> 
+                        with <span class="highlight">3+ years of experience</span> managing end-to-end cloud infrastructure 
+                        across <span class="highlight">GCP</span> and <span class="highlight">Azure</span>.
+                    </p>
+                    <p>
+                        I lead a team of engineers handling cloud operations including 
+                        <span class="highlight">cost optimization</span>, <span class="highlight">disaster recovery</span>, 
+                        and <span class="highlight">infrastructure automation</span>.
+                    </p>
+                    <div class="traits">
+                        <span class="trait"><i class="fas fa-dumbbell"></i> Dedicated Hardworker</span>
+                        <span class="trait"><i class="fas fa-rocket"></i> Quick Learner</span>
+                        <span class="trait"><i class="fas fa-fire"></i> 24x7 On-Call</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Focus Areas Section -->
+        <section class="focus-section section-animate">
+            <div class="section-header">
+                <span class="section-number">02.</span>
+                <h2>Current Focus</h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="focus-grid">
+                <div class="focus-item card-3d">
+                    <div class="focus-icon"><i class="fas fa-stream"></i></div>
+                    <h4>Data Pipeline</h4>
+                    <p>Flink, Kafka, ClickHouse</p>
+                </div>
+                <div class="focus-item card-3d">
+                    <div class="focus-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>DevSecOps</h4>
+                    <p>Security-first CI/CD</p>
+                </div>
+                <div class="focus-item card-3d">
+                    <div class="focus-icon"><i class="fas fa-chart-line"></i></div>
+                    <h4>Observability</h4>
+                    <p>Grafana, Prometheus</p>
+                </div>
+                <div class="focus-item card-3d">
+                    <div class="focus-icon"><i class="fas fa-coins"></i></div>
+                    <h4>FinOps</h4>
+                    <p>Cost Optimization</p>
+                </div>
+                <div class="focus-item card-3d">
+                    <div class="focus-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h4>DR Planning</h4>
+                    <p>Disaster Recovery</p>
+                </div>
+                <div class="focus-item card-3d">
+                    <div class="focus-icon"><i class="fas fa-bell"></i></div>
+                    <h4>Incident Mgmt</h4>
+                    <p>P1 Resolution</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills section-animate">
+            <div class="section-header">
+                <span class="section-number">03.</span>
+                <h2>Tech Stack</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category glass-card">
+                    <div class="category-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud Platforms</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge gcp"><i class="fab fa-google"></i> GCP</span>
+                        <span class="skill-badge azure"><i class="fab fa-microsoft"></i> Azure</span>
+                        <span class="skill-badge aws"><i class="fab fa-aws"></i> AWS</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <div class="category-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Security & Scanning</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge cloudarmor"><i class="fas fa-shield-virus"></i> Cloud Armor</span>
+                        <span class="skill-badge trivy"><i class="fas fa-search"></i> Trivy</span>
+                        <span class="skill-badge ssl"><i class="fas fa-lock"></i> SSL/TLS</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <div class="category-icon"><i class="fab fa-docker"></i></div>
+                    <h3>Containers</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge k8s">Kubernetes</span>
+                        <span class="skill-badge docker">Docker</span>
+                        <span class="skill-badge helm">Helm</span>
+                        <span class="skill-badge podman">Podman</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <div class="category-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>IaC & Config</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge terraform">Terraform</span>
+                        <span class="skill-badge ansible">Ansible</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <div class="category-icon"><i class="fas fa-code"></i></div>
+                    <h3>Languages</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge python">Python</span>
+                        <span class="skill-badge go">Go</span>
+                        <span class="skill-badge bash">Bash</span>
+                        <span class="skill-badge cpp">C++</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <div class="category-icon"><i class="fas fa-database"></i></div>
+                    <h3>Data & Streaming</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge kafka">Kafka</span>
+                        <span class="skill-badge flink">Flink</span>
+                        <span class="skill-badge clickhouse">ClickHouse</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <div class="category-icon"><i class="fas fa-chart-area"></i></div>
+                    <h3>Monitoring</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge grafana">Grafana</span>
+                        <span class="skill-badge prometheus">Prometheus</span>
+                        <span class="skill-badge datadog">Datadog</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <div class="category-icon"><i class="fas fa-server"></i></div>
+                    <h3>Databases</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge mysql">MySQL</span>
+                        <span class="skill-badge postgres">PostgreSQL</span>
+                        <span class="skill-badge redis">Redis</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <div class="category-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Web & DNS</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge nginx"><i class="fas fa-server"></i> Nginx</span>
+                        <span class="skill-badge dns"><i class="fas fa-globe"></i> DNS</span>
+                        <span class="skill-badge vercel"><i class="fas fa-triangle"></i> Vercel</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <div class="category-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>CI/CD & DevOps</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge devtron"><i class="fas fa-dharmachakra"></i> Devtron</span>
+                        <span class="skill-badge githubhooks"><i class="fab fa-github"></i> GitHub Hooks</span>
+                        <span class="skill-badge gitlab">GitLab CI</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <div class="category-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge git">Git</span>
+                        <span class="skill-badge github">GitHub</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <div class="category-icon"><i class="fas fa-video"></i></div>
+                    <h3>Infrastructure</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge camera"><i class="fas fa-camera"></i> Camera Systems</span>
+                        <span class="skill-badge sftpgo"><i class="fas fa-exchange-alt"></i> SFTPGo</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <div class="category-icon"><i class="fas fa-lock"></i></div>
+                    <h3>VPN & Tunneling</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge vpngateway"><i class="fas fa-shield-alt"></i> VPN Gateway</span>
+                        <span class="skill-badge openvpn"><i class="fas fa-key"></i> OpenVPN</span>
+                        <span class="skill-badge ipsec"><i class="fas fa-tunnel"></i> IPSec Tunnel</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <div class="category-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3>Networking</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge peering"><i class="fas fa-network-wired"></i> Network Peering</span>
+                        <span class="skill-badge troubleshoot"><i class="fas fa-bug"></i> Troubleshooting</span>
+                        <span class="skill-badge firewall"><i class="fas fa-fire"></i> Firewall Rules</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <div class="category-icon"><i class="fas fa-desktop"></i></div>
+                    <h3>Operating Systems</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge ubuntu"><i class="fab fa-ubuntu"></i> Ubuntu</span>
+                        <span class="skill-badge rhel"><i class="fab fa-redhat"></i> RHEL</span>
+                        <span class="skill-badge kali"><i class="fab fa-linux"></i> Kali Linux</span>
+                        <span class="skill-badge windows"><i class="fab fa-windows"></i> Windows</span>
+                        <span class="skill-badge macos"><i class="fab fa-apple"></i> macOS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="certifications section-animate">
+            <div class="section-header light">
+                <span class="section-number">04.</span>
+                <h2>Certifications</h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-item float-animation">
+                    <div class="cert-icon"><i class="fab fa-google"></i></div>
+                    <span>2× Google Cloud Certified</span>
+                </div>
+                <div class="cert-item float-animation" style="animation-delay: 0.2s">
+                    <div class="cert-icon"><i class="fab fa-aws"></i></div>
+                    <span>AWS Certified</span>
+                </div>
+                <div class="cert-item float-animation" style="animation-delay: 0.4s">
+                    <div class="cert-icon"><i class="fas fa-users-cog"></i></div>
+                    <span>Team Leadership</span>
+                </div>
+                <div class="cert-item float-animation" style="animation-delay: 0.6s">
+                    <div class="cert-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <span>Cloud Management</span>
+                </div>
+                <div class="cert-item float-animation" style="animation-delay: 0.8s">
+                    <div class="cert-icon"><i class="fas fa-piggy-bank"></i></div>
+                    <span>FinOps Expert</span>
+                </div>
+                <div class="cert-item float-animation" style="animation-delay: 1s">
+                    <div class="cert-icon"><i class="fas fa-shield-virus"></i></div>
+                    <span>DevSecOps</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="quote-section section-animate">
+            <div class="quote-card">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="quote-text">Striving to automate everything that can be automated.</p>
+                <div class="quote-author">— My Philosophy</div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-me section-animate">
+            <div class="section-header">
+                <span class="section-number">05.</span>
+                <h2>Get In Touch</h2>
+                <div class="header-line"></div>
+            </div>
+            <p class="contact-subtitle">I love connecting with people from around the world!</p>
+            <p class="contact-desc">Feel free to reach out and introduce yourself 😊</p>
+            <div class="contact-buttons">
+                <a class="contact-btn email" href="mailto:shivam8770ora@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email Me</span>
+                </a>
+                <a class="contact-btn whatsapp" href="https://wa.me/+919753806905" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a class="contact-btn linkedin" href="https://www.linkedin.com/in/shivam-patidar-9639a1190" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </section>
+    </div>
       
-    
-    
+    <!-- Footer -->
+    <footer class="bottom-container">
+        <div class="social-links">
+            <a class="social-icon" target="_blank" href="https://github.com/shivamora27" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="social-icon" target="_blank" href="https://www.linkedin.com/in/shivam-patidar-9639a1190" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a class="social-icon" target="_blank" href="https://www.instagram.com/shivam_27_00/" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a class="social-icon" target="_blank" href="https://www.facebook.com/shivam.orapatidar" title="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a class="social-icon" target="_blank" href="https://www.hackerrank.com/shivam8770ora?hr_r=1" title="HackerRank">
+                <i class="fab fa-hackerrank"></i>
+            </a>
+        </div>
+        <div class="footer-stats">
+            <img src="https://komarev.com/ghpvc/?username=shivamora27&label=Visitors&color=667eea&style=flat-square" alt="Profile views" />
+        </div>
+        <p class="copyright">
+            Designed & Built by <span class="highlight">Shivam Patidar</span> © 2024
+        </p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
-</html
+</html>
