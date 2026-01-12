@@ -405,34 +405,31 @@
     <script>
         // Fallback: If external script fails, this ensures basic functionality
         (function() {
-            // Typing Animation Fallback
+            // Typing Animation Fallback - Smooth word transition
             var typedText = document.querySelector('.typed-text');
             if (typedText && !typedText.textContent) {
                 var texts = ['DevOps Lead', 'Cloud Architect', 'Team Leader', 'Problem Solver'];
-                var textIndex = 0, charIndex = 0, isDeleting = false;
+                var textIndex = 0;
                 
-                function type() {
-                    var current = texts[textIndex];
-                    if (isDeleting) {
-                        typedText.textContent = current.substring(0, charIndex - 1);
-                        charIndex--;
-                    } else {
-                        typedText.textContent = current.substring(0, charIndex + 1);
-                        charIndex++;
-                    }
+                // Set initial text
+                typedText.textContent = texts[textIndex];
+                typedText.style.transition = 'opacity 0.5s ease';
+                
+                function changeWord() {
+                    // Fade out
+                    typedText.style.opacity = '0';
                     
-                    var speed = isDeleting ? 50 : 100;
-                    if (!isDeleting && charIndex === current.length) {
-                        speed = 2000;
-                        isDeleting = true;
-                    } else if (isDeleting && charIndex === 0) {
-                        isDeleting = false;
+                    setTimeout(function() {
+                        // Change text while hidden
                         textIndex = (textIndex + 1) % texts.length;
-                        speed = 500;
-                    }
-                    setTimeout(type, speed);
+                        typedText.textContent = texts[textIndex];
+                        // Fade in
+                        typedText.style.opacity = '1';
+                    }, 500);
                 }
-                type();
+                
+                // Change word every 3 seconds
+                setInterval(changeWord, 3000);
             }
             
             // Scroll Animation Fallback
